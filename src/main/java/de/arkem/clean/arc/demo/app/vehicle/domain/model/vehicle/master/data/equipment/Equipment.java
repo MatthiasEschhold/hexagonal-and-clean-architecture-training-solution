@@ -1,6 +1,7 @@
 package de.arkem.clean.arc.demo.app.vehicle.domain.model.vehicle.master.data.equipment;
 
-public record Equipment(EquipmentCode equipmentCode, EquipmentLabel equipmentLabel) {
+public record Equipment(
+        EquipmentCode equipmentCode, EquipmentLabel equipmentLabel) {
 
     public Equipment {
         validateEquipment(equipmentCode, equipmentLabel);

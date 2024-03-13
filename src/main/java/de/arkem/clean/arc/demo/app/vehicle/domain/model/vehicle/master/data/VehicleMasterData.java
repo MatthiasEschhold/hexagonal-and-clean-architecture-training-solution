@@ -11,7 +11,7 @@ public record VehicleMasterData(CountryOfManufacture countryOfManufacture, List<
     }
 
     private void validateVehicleMasterData(CountryOfManufacture countryOfManufacture, List<Equipment> equipmentList) {
-        if(equipmentList == null || equipmentList.isEmpty() || countryOfManufacture == null) {
+        if (equipmentList == null || equipmentList.isEmpty() || countryOfManufacture == null) {
             throw new IllegalArgumentException("vehicle master data is not valid");
         }
     }

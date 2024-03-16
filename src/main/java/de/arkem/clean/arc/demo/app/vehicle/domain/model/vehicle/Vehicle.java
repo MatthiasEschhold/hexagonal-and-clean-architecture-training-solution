@@ -12,10 +12,10 @@ import java.util.List;
 import java.util.Optional;
 
 public class Vehicle {
-    private Vin vin;
-    private LicensePlate licensePlate;
+    private final Vin vin;
+    private final LicensePlate licensePlate;
     private List<MileageRecord> mileageRecords;
-    private VehicleMasterData vehicleMasterData;
+    private final VehicleMasterData vehicleMasterData;
 
     private Vehicle(Vin vin, LicensePlate licensePlate, VehicleMasterData vehicleMasterData) {
         this.vin = vin;

@@ -10,7 +10,6 @@ import de.arkem.clean.arc.demo.app.vehicle.usecase.in.GetVehicleByVin;
 public class PartsCatalogViewApplicationService {
     private final GetVehicleByVin getVehicleByVin;
     private final LoadPartsCatalogView loadPartsCatalogView;
-
     private final VehicleMapper mapper;
 
     public PartsCatalogViewApplicationService(GetVehicleByVin getVehicleByVin, LoadPartsCatalogView loadPartsCatalogView, VehicleMapper mapper) {

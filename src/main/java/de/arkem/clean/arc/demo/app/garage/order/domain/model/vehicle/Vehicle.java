@@ -1,5 +1,6 @@
 package de.arkem.clean.arc.demo.app.garage.order.domain.model.vehicle;
 
+import de.arkem.clean.arc.demo.app.vehicle.domain.model.vehicle.Vin;
 import io.github.domainprimitives.object.ComposedValueObject;
 
 public class Vehicle extends ComposedValueObject {

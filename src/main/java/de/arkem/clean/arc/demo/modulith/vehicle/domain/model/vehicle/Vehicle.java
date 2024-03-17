@@ -112,7 +112,8 @@ public class Vehicle {
      */
     public static Vehicle createNewVehicle(Vin vin, LicensePlate licensePlate, Mileage mileage, VehicleMasterData vehicleMasterData) {
         Vehicle vehicle = new Vehicle(vin, licensePlate, vehicleMasterData);
-        vehicle.updateMileage(mileage);
+        vehicle.mileageRecords = new ArrayList<>();
+        vehicle.mileageRecords.add(new MileageRecord(mileage, new RecordDate(LocalDateTime.now())));
         return vehicle;
     }
 }

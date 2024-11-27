@@ -5,7 +5,7 @@ import com.tngtech.archunit.core.importer.ImportOption;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 
-@AnalyzeClasses(packages = "de.arkem.clean.arc.demo.app.lab.one",
+@AnalyzeClasses(packages = "de.arkem.clean.arc.demo.modulith",
         importOptions = {ImportOption.DoNotIncludeTests.class,
                 ImportOption.DoNotIncludeJars.class})
 public class CleanArchitectureTest {

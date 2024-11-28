@@ -3,9 +3,11 @@ package de.arkem.clean.arc.demo.vehicle.adapter.in.api;
 import de.arkem.clean.arc.demo.vehicle.adapter.in.api.resource.CreateVehicleResource;
 import de.arkem.clean.arc.demo.vehicle.adapter.in.api.resource.MileageRecordResource;
 import de.arkem.clean.arc.demo.vehicle.adapter.in.api.resource.VehicleResource;
+import de.arkem.clean.arc.demo.vehicle.adapter.out.db.entity.VehicleDbEntity;
 import de.arkem.clean.arc.demo.vehicle.domain.model.vehicle.LicensePlate;
 import de.arkem.clean.arc.demo.vehicle.domain.model.vehicle.Vin;
 import de.arkem.clean.arc.demo.vehicle.domain.model.vehicle.mileage.record.Mileage;
+import de.arkem.clean.arc.demo.vehicle.domain.service.TheftRiskRatingService;
 import de.arkem.clean.arc.demo.vehicle.usecase.in.CreateVehicle;
 import de.arkem.clean.arc.demo.vehicle.usecase.in.GetAllVehicles;
 import de.arkem.clean.arc.demo.vehicle.usecase.in.GetVehicleByVin;
@@ -19,11 +21,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/vehicles")
 class VehicleController {
+
     private final VehicleToResourceMapper resourceMapper;
     private final CreateVehicle createVehicle;
     private final UpdateMileage updateMileage;
     private final GetVehicleByVin getVehicle;
     private final GetAllVehicles getAllVehicles;
+
     public VehicleController(VehicleToResourceMapper resourceMapper, CreateVehicle createVehicle, UpdateMileage updateMileage, GetVehicleByVin getVehicle, GetAllVehicles getAllVehicles) {
         this.resourceMapper = resourceMapper;
         this.createVehicle = createVehicle;

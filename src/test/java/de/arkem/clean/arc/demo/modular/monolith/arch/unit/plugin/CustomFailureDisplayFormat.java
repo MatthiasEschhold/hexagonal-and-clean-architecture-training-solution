@@ -1,4 +1,4 @@
-package de.arkem.clean.arc.demo.modulith.arch.unit.plugin;
+package de.arkem.clean.arc.demo.modular.monolith.arch.unit.plugin;
 
 import com.tngtech.archunit.base.HasDescription;
 import com.tngtech.archunit.lang.FailureDisplayFormat;

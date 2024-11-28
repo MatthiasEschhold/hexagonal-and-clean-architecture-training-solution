@@ -1,6 +1,6 @@
 package de.arkem.clean.arc.demo.garage.order.domain.model.vehicle;
 
-import de.arkem.shared.domain.model.types.DoubleValueObject;
+import de.arkem.shared.domain.model.type.DoubleValueObject;
 import io.github.domainprimitives.validation.Constraints;
 import io.github.domainprimitives.validation.Validation;
 

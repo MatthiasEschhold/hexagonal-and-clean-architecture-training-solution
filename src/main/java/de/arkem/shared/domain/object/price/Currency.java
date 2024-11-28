@@ -1,6 +1,6 @@
 package de.arkem.shared.domain.object.price;
 
-import de.arkem.shared.domain.model.types.StringValueObject;
+import de.arkem.shared.domain.model.type.StringValueObject;
 import io.github.domainprimitives.validation.Constraints;
 import io.github.domainprimitives.validation.Validation;
 

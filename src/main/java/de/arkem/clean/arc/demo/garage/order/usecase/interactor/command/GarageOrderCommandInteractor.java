@@ -6,7 +6,6 @@ import de.arkem.clean.arc.demo.garage.order.usecase.out.FetchVehicle;
 import de.arkem.clean.arc.demo.garage.order.usecase.out.GarageOrderDbCommand;
 import de.arkem.clean.arc.demo.garage.order.usecase.out.GarageOrderDbQuery;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 @Component
 class GarageOrderCommandInteractor implements GarageOrderCommand {
@@ -14,6 +13,7 @@ class GarageOrderCommandInteractor implements GarageOrderCommand {
     private final GarageOrderDbCommand dbCommand;
     private final GarageOrderDbQuery dbQuery;
     private final FetchVehicle fetchVehicle;
+
     public GarageOrderCommandInteractor(GarageOrderDbCommand dbCommand, GarageOrderDbQuery dbQuery, FetchVehicle fetchVehicle) {
         this.dbCommand = dbCommand;
         this.dbQuery = dbQuery;
@@ -28,7 +28,6 @@ class GarageOrderCommandInteractor implements GarageOrderCommand {
     }
 
     @Override
-    @Transactional
     public GarageOrder update(UpdateGarageOrderCommand updateGarageOrderCommand) {
         var garageOrder = findGarageOrder(updateGarageOrderCommand);
         garageOrder.addOrderPositions(updateGarageOrderCommand.orderItems());

@@ -1,8 +1,9 @@
 @AppModule(
         name = "GarageOrder",
-        allowedDependencies = {"Poolfahrzeug"},
-        exposedPackages = {"de.arkem.clean.arc.demo.modulith.garage.order.usecase.in"}
+        allowedDependencies = {"SpareParts", "Vehicle", "SharedModelTypes", "SharedDomainObjects"},
+        exposedPackages = {}
 )
 package de.arkem.clean.arc.demo.garage.order;
-import de.arkem.shared.domain.model.types.AppModule;
+
+import de.arkem.shared.domain.model.type.AppModule;
 

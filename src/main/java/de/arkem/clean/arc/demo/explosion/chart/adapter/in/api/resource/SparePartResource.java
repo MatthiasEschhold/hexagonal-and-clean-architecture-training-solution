@@ -1,11 +1,11 @@
 package de.arkem.clean.arc.demo.explosion.chart.adapter.in.api.resource;
 
+import de.arkem.shared.resource.PriceConfigurationResource;
+
 public class SparePartResource {
     private String sparePartNumber;
     private String sparePartName;
     private PriceConfigurationResource priceConfiguration;
-
-    private String manufactureCode;
 
     public String getSparePartNumber() {
         return sparePartNumber;
@@ -31,11 +31,4 @@ public class SparePartResource {
         this.priceConfiguration = priceConfiguration;
     }
 
-    public String getManufactureCode() {
-        return manufactureCode;
-    }
-
-    public void setManufactureCode(String manufactureCode) {
-        this.manufactureCode = manufactureCode;
-    }
 }

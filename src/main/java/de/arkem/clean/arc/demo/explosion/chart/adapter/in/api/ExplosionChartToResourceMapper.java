@@ -1,13 +1,11 @@
 package de.arkem.clean.arc.demo.explosion.chart.adapter.in.api;
 
-import de.arkem.clean.arc.demo.explosion.chart.adapter.in.api.resource.CategoryResource;
-import de.arkem.clean.arc.demo.explosion.chart.adapter.in.api.resource.ExplosionChartResource;
-import de.arkem.clean.arc.demo.explosion.chart.adapter.in.api.resource.SparePartResource;
-import de.arkem.clean.arc.demo.explosion.chart.adapter.in.api.resource.VehicleResource;
+import de.arkem.clean.arc.demo.explosion.chart.adapter.in.api.resource.*;
 import de.arkem.clean.arc.demo.explosion.chart.domain.model.category.Category;
 import de.arkem.clean.arc.demo.explosion.chart.domain.model.vehicle.ExplosionChartVehicle;
 import de.arkem.clean.arc.demo.explosion.chart.usecase.interactor.load.ExplosionChartResponse;
 import de.arkem.clean.arc.demo.explosion.chart.usecase.interactor.load.SparePartData;
+import de.arkem.shared.resource.PriceConfigurationResource;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -36,10 +34,19 @@ public class ExplosionChartToResourceMapper {
             var sparePartResource = new SparePartResource();
             sparePartResource.setSparePartNumber(sparePart.partNumber());
             sparePartResource.setSparePartName(sparePart.partName());
-            sparePartResource.setPrice(sparePart.price());
+            sparePartResource.setPriceConfiguration(mapToPriceConfigurationResource(sparePart));
             return sparePartResource;
         }).collect(Collectors.toList());
     }
+
+    private PriceConfigurationResource mapToPriceConfigurationResource(SparePartData sparePartData) {
+        var priceConfiguration = new PriceConfigurationResource();
+        priceConfiguration.setNetPrice(sparePartData.netPrice());
+        priceConfiguration.setNetPriceRecommodation(sparePartData.netPriceRecommodation());
+        priceConfiguration.setCurrency(sparePartData.currency());
+        return priceConfiguration;
+    }
+
     private VehicleResource mapToVehicleResource(ExplosionChartVehicle entity) {
         VehicleResource vehicleResource = new VehicleResource();
         vehicleResource.setVehicleModel(entity.getModel().getValue());

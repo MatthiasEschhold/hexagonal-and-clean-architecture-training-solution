@@ -1,4 +1,4 @@
-package de.arkem.clean.arc.demo.explosion.chart.adapter.in.api.resource;
+package de.arkem.shared.resource;
 
 public class PriceConfigurationResource {
     private String currency;

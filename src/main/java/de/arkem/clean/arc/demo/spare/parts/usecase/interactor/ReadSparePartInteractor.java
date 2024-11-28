@@ -12,6 +12,8 @@ public class ReadSparePartInteractor implements ReadSparePart {
 
     private final FindSparePart findSparePart;
 
+    //private SparePartJpaRepository repository;
+
     public ReadSparePartInteractor(FindSparePart findSparePart) {
         this.findSparePart = findSparePart;
     }

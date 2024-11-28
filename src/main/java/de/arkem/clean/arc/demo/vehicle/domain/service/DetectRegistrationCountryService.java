@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DetectRegistrationCountryService {
+
     public CountryCode detect(LicensePlate licensePlate) {
         return new CountryCode("DE");
     }

@@ -1,4 +1,4 @@
-package de.arkem.shared.domain.model.types;
+package de.arkem.shared.domain.model.type;
 
 import io.github.domainprimitives.type.ValueObject;
 import io.github.domainprimitives.validation.Constraints;

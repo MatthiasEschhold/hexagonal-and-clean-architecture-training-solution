@@ -2,6 +2,7 @@ package de.arkem.clean.arc.demo.spare.parts.adapter.out.db;
 
 import de.arkem.clean.arc.demo.spare.parts.domain.model.PartNumber;
 import de.arkem.clean.arc.demo.spare.parts.domain.model.SparePart;
+import de.arkem.clean.arc.demo.spare.parts.usecase.interactor.CreateSparePartInteractor;
 import de.arkem.clean.arc.demo.spare.parts.usecase.out.FindSparePart;
 import de.arkem.clean.arc.demo.spare.parts.usecase.out.SaveSparePart;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,8 @@ public class SparePartRepository implements SaveSparePart, FindSparePart {
 
     private final SparePartJpaRepository jpaRepository;
     private final SpartPartDbEntityToDomainMapper mapper;
+
+    private CreateSparePartInteractor sparePartInteractor;
 
     public SparePartRepository(SparePartJpaRepository jpaRepository, SpartPartDbEntityToDomainMapper mapper) {
         this.jpaRepository = jpaRepository;

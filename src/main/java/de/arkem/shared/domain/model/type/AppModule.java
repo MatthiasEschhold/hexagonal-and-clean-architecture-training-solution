@@ -1,4 +1,4 @@
-package de.arkem.shared.domain.model.types;
+package de.arkem.shared.domain.model.type;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

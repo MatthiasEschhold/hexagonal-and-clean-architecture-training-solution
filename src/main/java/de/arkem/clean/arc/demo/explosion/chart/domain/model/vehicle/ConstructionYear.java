@@ -1,6 +1,6 @@
 package de.arkem.clean.arc.demo.explosion.chart.domain.model.vehicle;
 
-import de.arkem.shared.domain.model.types.IntegerValueObject;
+import de.arkem.shared.domain.model.type.IntegerValueObject;
 
 public class ConstructionYear extends IntegerValueObject {
     public ConstructionYear(Integer value) {

@@ -1,6 +1,5 @@
 package de.arkem.clean.arc.demo.explosion.chart.adapter.out.vehicle;
 
-import de.arkem.clean.arc.demo.explosion.chart.domain.model.vehicle.ExplosionChartVehicle;
 import de.arkem.clean.arc.demo.explosion.chart.usecase.interactor.load.VehicleData;
 import de.arkem.clean.arc.demo.explosion.chart.usecase.out.FetchVehicle;
 import de.arkem.clean.arc.demo.vehicle.domain.model.vehicle.Vin;

@@ -1,4 +1,4 @@
 package de.arkem.clean.arc.demo.explosion.chart.usecase.interactor.load;
 
-public record SparePartData(String partNumber, String partName, double price) {
+public record SparePartData(String partNumber, String partName, double netPrice, double netPriceRecommodation, String currency) {
 }

@@ -1,10 +1,12 @@
 @AppModule(
-        name = "vehicle",
-        allowedDependencies = {},
-        exposedPackages = {"de.arkem.clean.arc.demo.vehicle.usecase.in",
-                "de.arkem.clean.arc.demo.vehicle.adapter.in"}
+        name = "Vehicle",
+        allowedDependencies = {"SharedModelTypes"},
+        exposedPackages = {
+                "..vehicle.usecase.in..",
+                "..vehicle.domain.model.."
+        }
 )
 package de.arkem.clean.arc.demo.vehicle;
 
-import de.arkem.shared.domain.model.types.AppModule;
+import de.arkem.shared.domain.model.type.AppModule;
 

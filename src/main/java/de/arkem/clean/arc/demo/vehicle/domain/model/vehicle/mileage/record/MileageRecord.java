@@ -1,6 +1,7 @@
 package de.arkem.clean.arc.demo.vehicle.domain.model.vehicle.mileage.record;
 
 public record MileageRecord(Mileage mileage, RecordDate recordDate) {
+
     public MileageRecord {
         validateMileageRecord(mileage, recordDate);
     }

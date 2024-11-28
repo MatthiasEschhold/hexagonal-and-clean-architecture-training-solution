@@ -1,4 +1,4 @@
-package de.arkem.clean.arc.demo.modulith.arch.unit.plugin;
+package de.arkem.clean.arc.demo.modular.monolith.arch.unit.plugin;
 
 public enum CleanArchitectureCheck {
     ARCHITECTURAL_EXPRESSIVE,
